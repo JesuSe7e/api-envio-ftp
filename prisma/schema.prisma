@@ -1,0 +1,13 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model tblAtivacaoSistema {
+  id     Int    @id @default(autoincrement())
+  Token  String
+}
